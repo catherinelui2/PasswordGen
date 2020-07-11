@@ -8,7 +8,7 @@ var charSymbols = confirm("Would you like to include special characters?");
 var symbols = '!@#$%^&*(){}[]=<>/,.';
 var numbers = '0123456789'
 var lowerLetters = 'abcdefghijklmnopqrstuvwxyz'
-var upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+var upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVW'
 var selected = '';
 
 
@@ -33,7 +33,12 @@ var generateBtn = document.querySelector("#generate");
 
 // // Write password to the #password input
 function writePassword() {
+  var passwordResult = '';
+	for (var i =0; i < userInput; i++); {
+passwordResult = passwordResult + selected[Math.floor(Math.random()*selected.length)];
+}
 
+  document.querySelector("#password").innerHTML = passwordResult;
 
 }
 
